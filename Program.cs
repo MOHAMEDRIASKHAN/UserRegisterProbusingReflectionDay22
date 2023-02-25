@@ -6,7 +6,22 @@ namespace UserRegisterationProblemusingReflectionDay22
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to UserRegisterationProblemUsingReflection");
+            Type c = typeof(PersonDetails);
+
+            ConstructorInfo[] constructorInfos = c.GetConstructors();
+
+            foreach (ConstructorInfo ci in constructorInfos)
+            {
+                Console.WriteLine(ci);
+            }
+
+            MethodInfo[] methodInfos = c.GetMethods();
+
+            foreach (MethodInfo ci in methodInfos)
+
+            {
+                Console.WriteLine(ci);
+            }
         }
     }
 }
